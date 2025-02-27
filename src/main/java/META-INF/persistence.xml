@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
 	<persistence-unit name="Etudiants">
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>donnees.Etudiant</class>
+		<class>donnees.Formation</class>
+		<class>donnees.Ue</class>
+		<class>donnees.Compte</class>
+		<class>donnees.Message</class>
+		<class>donnees.Responsable</class>
+		<class>donnees.Groupe</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="#adresseBDD" />
+			<property name="javax.persistence.jdbc.user"
+				value="#NomBDD" />
+			<property name="javax.persistence.jdbc.password"
+				value="#MDPBDD" />
+			<property name="javax.persistence.jdbc.driver"
+				value="org.mariadb.jdbc.Driver" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
 	</persistence-unit>
 </persistence>
